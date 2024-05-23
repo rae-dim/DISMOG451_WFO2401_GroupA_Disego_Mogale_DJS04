@@ -1,4 +1,5 @@
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
+import './BookPreview.js'
 
 let page = 1;
 let matches = books
@@ -227,7 +228,12 @@ document.querySelector('[data-list-items]').addEventListener('click', (event) =>
         }
     }
     
+
+    let preview = document.getElementsByTagName('bookpreview');
+
+
     if (active) {
+
         document.querySelector('[data-list-active]').open = true
         document.querySelector('[data-list-blur]').src = active.image
         document.querySelector('[data-list-image]').src = active.image
